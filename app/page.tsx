@@ -1,4 +1,7 @@
+"use client";
+
 import { Button, IconButton, ButtonGroup } from "./components/buttons";
+import { PricingCard } from "./components/pricing";
 
 // Iconos simples para los ejemplos
 const StarIcon = () => (
@@ -321,6 +324,118 @@ export default function Home() {
                 <Button variant="danger" leftIcon={<StarIcon />} rightIcon={<XIcon />}>
                   Button
                 </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Card Component */}
+        <section className="flex flex-col gap-6">
+          <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">
+            Pricing Card - Componente
+          </h2>
+          <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-4">
+              <h3 className="text-xl font-semibold text-black dark:text-zinc-50">
+                Variantes Desktop
+              </h3>
+              <div className="flex flex-wrap gap-6">
+                <div className="flex flex-col gap-2">
+                  <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                    Desktop / Stroke
+                  </span>
+                  <PricingCard
+                    title="Basic Plan"
+                    price="29"
+                    currency="$"
+                    label="/ mo"
+                    features={[
+                      "Feature 1",
+                      "Feature 2",
+                      "Feature 3",
+                      "Feature 4",
+                      "Feature 5",
+                    ]}
+                    buttonText="Get Started"
+                    device="Desktop"
+                    variant="Stroke"
+                    onButtonClick={() => console.log("Desktop/Stroke clicked")}
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                    Desktop / Brand
+                  </span>
+                  <PricingCard
+                    title="Pro Plan"
+                    price="50"
+                    currency="$"
+                    label="/ mo"
+                    features={[
+                      "Feature 1",
+                      "Feature 2",
+                      "Feature 3",
+                      "Feature 4",
+                      "Feature 5",
+                    ]}
+                    buttonText="Get Started"
+                    device="Desktop"
+                    variant="Brand"
+                    onButtonClick={() => console.log("Desktop/Brand clicked")}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-4">
+              <h3 className="text-xl font-semibold text-black dark:text-zinc-50">
+                Variantes Mobile
+              </h3>
+              <div className="flex flex-wrap gap-6">
+                <div className="flex flex-col gap-2">
+                  <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                    Mobile / Stroke
+                  </span>
+                  <PricingCard
+                    title="Basic Plan"
+                    price="29"
+                    currency="$"
+                    label="/ mo"
+                    features={[
+                      "Feature 1",
+                      "Feature 2",
+                      "Feature 3",
+                      "Feature 4",
+                      "Feature 5",
+                    ]}
+                    buttonText="Get Started"
+                    device="Mobile"
+                    variant="Stroke"
+                    onButtonClick={() => console.log("Mobile/Stroke clicked")}
+                  />
+                </div>
+                <div className="flex flex-col gap-2">
+                  <span className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                    Mobile / Brand
+                  </span>
+                  <PricingCard
+                    title="Pro Plan"
+                    price="50"
+                    currency="$"
+                    label="/ mo"
+                    features={[
+                      "Feature 1",
+                      "Feature 2",
+                      "Feature 3",
+                      "Feature 4",
+                      "Feature 5",
+                    ]}
+                    buttonText="Get Started"
+                    device="Mobile"
+                    variant="Brand"
+                    onButtonClick={() => console.log("Mobile/Brand clicked")}
+                  />
+                </div>
               </div>
             </div>
           </div>
