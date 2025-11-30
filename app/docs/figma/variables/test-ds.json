@@ -1,0 +1,73 @@
+{
+  "id": "VariableCollectionId:16:14",
+  "name": "Variable collection",
+  "modes": {
+    "16:0": "Mode 1"
+  },
+  "variableIds": [
+    "VariableID:16:15",
+    "VariableID:16:16"
+  ],
+  "variables": [
+    {
+      "id": "VariableID:16:15",
+      "name": "test-primary/default",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "16:0": {
+          "r": 0.6410945057868958,
+          "g": 0.051999833434820175,
+          "b": 0.051999833434820175,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "16:0": {
+          "resolvedValue": {
+            "r": 0.6410945057868958,
+            "g": 0.051999833434820175,
+            "b": 0.051999833434820175,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    },
+    {
+      "id": "VariableID:16:16",
+      "name": "test-primary/200",
+      "description": "",
+      "type": "COLOR",
+      "valuesByMode": {
+        "16:0": {
+          "r": 0.48422476649284363,
+          "g": 0.041285689920186996,
+          "b": 0.041285689920186996,
+          "a": 1
+        }
+      },
+      "resolvedValuesByMode": {
+        "16:0": {
+          "resolvedValue": {
+            "r": 0.48422476649284363,
+            "g": 0.041285689920186996,
+            "b": 0.041285689920186996,
+            "a": 1
+          },
+          "alias": null
+        }
+      },
+      "scopes": [
+        "ALL_SCOPES"
+      ],
+      "hiddenFromPublishing": false,
+      "codeSyntax": {}
+    }
+  ]
+}

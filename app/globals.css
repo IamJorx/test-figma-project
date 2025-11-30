@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Figma Design System Variables */
+  --test-primary-default: rgb(163, 13, 13);
+  --test-primary-200: rgb(123, 10, 10);
 }
 
 @theme inline {
