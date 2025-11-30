@@ -11,6 +11,7 @@ export const IconButton = ({
   disabled = false,
   className = "",
   "aria-label": ariaLabel,
+  onClick,
   ...props
 }: IconButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -23,6 +24,22 @@ export const IconButton = ({
     ...(isHovered && !disabled ? hoverStyles : {}),
   };
 
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const buttonConfig = {
+      variant,
+      size,
+      disabled,
+      "aria-label": ariaLabel,
+      type: "IconButton",
+    };
+
+    console.log("IconButton clicked:", buttonConfig);
+
+    if (onClick) {
+      onClick(event);
+    }
+  };
+
   return (
     <button
       className={combinedClassName}
@@ -31,6 +48,7 @@ export const IconButton = ({
       aria-label={ariaLabel}
       onMouseEnter={() => !disabled && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleClick}
       {...props}
     >
       <span className="flex items-center justify-center">{icon}</span>

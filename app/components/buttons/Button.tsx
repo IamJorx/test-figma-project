@@ -12,6 +12,7 @@ export const Button = ({
   className = "",
   leftIcon,
   rightIcon,
+  onClick,
   ...props
 }: ButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -24,6 +25,23 @@ export const Button = ({
     ...(isHovered && !disabled ? hoverStyles : {}),
   };
 
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const buttonConfig = {
+      variant,
+      size,
+      disabled,
+      hasLeftIcon: !!leftIcon,
+      hasRightIcon: !!rightIcon,
+      children: typeof children === "string" ? children : "ReactNode",
+    };
+
+    console.log("Button clicked:", buttonConfig);
+
+    if (onClick) {
+      onClick(event);
+    }
+  };
+
   return (
     <button
       className={combinedClassName}
@@ -31,6 +49,7 @@ export const Button = ({
       disabled={disabled}
       onMouseEnter={() => !disabled && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleClick}
       {...props}
     >
       {leftIcon && <span className="flex items-center">{leftIcon}</span>}
